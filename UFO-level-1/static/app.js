@@ -4,14 +4,14 @@ var tableData = data;
 // Select table
 var tbody = d3.select("tbody");
 
-//Grab reference to input text
-var date = d3.select("#datetime")
 
 //Filter by date
-function filterDate(event) {
-    var inputDate = d3.event.target.value;
+function filterDate() {
+    //Grab reference to input text
+    var date = d3.select("#datetime");
+    var inputDate = date.property("value");
 
-    var filteredData = tableData.filter(event => event.datetime === inputDate);
+    var filteredData = tableData.filter(sighting => sighting.datetime === inputDate);
 
     console.log(filteredData);
 
