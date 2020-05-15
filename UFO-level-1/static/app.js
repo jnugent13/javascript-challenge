@@ -7,6 +7,9 @@ var tbody = d3.select("tbody");
 
 //Filter by date
 function filterDate() {
+    // Delete existing rows
+    tbody.html("");
+
     //Grab reference to input text
     var date = d3.select("#datetime");
     var inputDate = date.property("value");
